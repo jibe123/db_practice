@@ -5,7 +5,7 @@ from config import db
 
 
 class TGUser(Model):
-    tg_user_id = IntegerField()
+    userid_tg = CharField(unique=True)
     username = CharField(null=True)
 
     class Meta:
@@ -13,7 +13,7 @@ class TGUser(Model):
 
 
 class Note(Model):
-    user_id = ForeignKeyField(TGUser, on_delete='CASCADE')
+    userid = ForeignKeyField(TGUser, to_field='userid_tg', on_delete='CASCADE')
     note = TextField()
     date = DateField()
 

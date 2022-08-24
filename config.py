@@ -6,3 +6,6 @@ db = MySQLDatabase(
     user='root',
     password='Zsynth91!'
 )
+
+ADMIN_USER_ID = '5185480704'
+TOKEN = '5611022130:AAGoHkuYDXHrnOmIrPsNHNoZk5pHIcVGpt4'
